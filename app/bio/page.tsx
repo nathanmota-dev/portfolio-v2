@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import { FaGithub, FaLinkedin, FaSpotify } from "react-icons/fa";
 import { FiBookOpen, FiMessageCircle, FiBox } from "react-icons/fi";
 import { SiX } from "react-icons/si";
@@ -28,6 +29,13 @@ export default function Bio() {
                         <p className="text-muted-foreground text-lg max-w-xl leading-relaxed">
                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate possimus eveniet aliquam officiis ab quod debitis, maiores eaque incidunt vel esse, eligendi soluta?
                         </p>
+                        <Link
+                            href="/cv"
+                            className="group bento-card w-full px-6 py-2.5 border border-border/50 rounded-3xl font-medium text-sm transition-all duration-300 hover:bg-black/2 hover:shadow-xl hover:shadow-primary/5 active:scale-[1.02]"
+                        >
+                            View Resume
+                        </Link>
+
                     </div>
                     <div className="md:col-span-4 relative group">
                         <div className="absolute inset-0 bg-primary/20 blur-3xl rounded-3xl group-hover:bg-primary/30 transition-all duration-700"></div>
@@ -116,7 +124,7 @@ export default function Bio() {
                     </a>
                 </div>
 
-                <footer className="pt-12 flex flex-col md:flex-row items-center justify-between gap-4 text-[10px] text-muted-foreground font-medium uppercase tracking-[0.2em]">
+                <footer className="pt-6 flex flex-col md:flex-row items-center justify-between gap-4 text-[10px] text-muted-foreground font-medium uppercase tracking-[0.2em]">
                     <div className="flex items-center gap-4">
                         <span>Based in São Paulo, BR</span>
                     </div>
