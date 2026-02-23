@@ -1,10 +1,11 @@
-import { FaGithub, FaLinkedin, FaInstagram } from "react-icons/fa";
+import { FaGithub, FaLinkedin, FaSpotify } from "react-icons/fa";
 import { SiX } from "react-icons/si";
 
 export const RESUME_DATA = {
     name: "Nathan Mota",
     initials: "NM",
     location: "Ribeirão Preto, SP, Brasil",
+    techStack: ["TypeScript", "React", "Angular", "Node", "AWS"],
     locationLink: "https://www.google.com/maps/place/Ribeir%C3%A3o+Preto+-+State+of+S%C3%A3o+Paulo",
     about:
         "Desenvolvedor Full-Stack apaixonado por solucionar problemas!",
@@ -28,14 +29,14 @@ export const RESUME_DATA = {
                 icon: FaLinkedin,
             },
             {
-                name: "Instagram",
-                url: "https://www.instagram.com/nathanssmota/",
-                icon: FaInstagram,
-            },
-            {
                 name: "X (Twitter)",
                 url: "https://x.com/pq_nathan",
                 icon: SiX,
+            },
+            {
+                name: "Spotify",
+                url: "https://open.spotify.com/user/d9zhqx5tfnna0pqx4or91e3re?si=bcf6f90eae0446d8",
+                icon: FaSpotify,
             },
         ],
     },
@@ -106,6 +107,7 @@ export const RESUME_DATA = {
         "PostrgreSQL",
         "MongoDB",
         "AWS",
+        "Docker",
     ],
     projects: [
         {
