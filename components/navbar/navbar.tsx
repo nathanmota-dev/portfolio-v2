@@ -10,10 +10,10 @@ export default function Navbar() {
     const isHome = pathname === "/"
 
     return (
-        <div className="max-w-3xl mx-auto space-y-8 py-2">
+        <div className="max-w-3xl mx-auto space-y-8 py-2 px-3 md:px-0">
             <nav className="flex items-center justify-between py-4">
                 {isHome ? (
-                    <div className="flex items-center gap-1.5 font-display font-bold text-lg">
+                    <div className="flex items-center font-display font-bold text-lg">
                         Nathan Mota
                     </div>
                 ) : (
@@ -23,8 +23,7 @@ export default function Navbar() {
                         </Link>
                     </Button>
                 )}
-                <div className="flex items-center gap-6">
-                    <a href="/cv" className="nav-link">/resume</a>
+                <div className="flex items-center gap-4 md:gap-6">
                     <a href="/projects" className="nav-link">/projects</a>
                     <a href="/articles" className="nav-link">/articles</a>
                     <a href="/contact" className="nav-link">/contact</a>

@@ -21,7 +21,7 @@ export default function Home() {
   return (
     <div className="text-foreground py-2 px-4 sm:px-6 selection:bg-primary/20">
       <main className="max-w-3xl mx-auto space-y-4">
-        <div className="flex flex-col md:flex-row justify-between gap-6">
+        <div className="flex flex-col-reverse md:flex-row justify-between gap-6">
           <div className="md:col-span-8 flex flex-col justify-center space-y-4">
             <h1 className="text-4xl md:text-5xl font-bold tracking-tight leading-[1.1]">
               Software Engineer
