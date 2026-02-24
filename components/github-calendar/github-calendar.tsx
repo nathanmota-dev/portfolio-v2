@@ -1,7 +1,16 @@
+"use client";
+
 import Link from 'next/link';
-import { GitHubCalendar } from 'react-github-calendar';
+import dynamic from 'next/dynamic';
 import { RESUME_DATA } from "@/data/resume-data";
 import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
+
+const GitHubCalendar = dynamic(
+    () => import('react-github-calendar').then((module) => module.GitHubCalendar),
+    {
+        ssr: false,
+    }
+);
 
 
 export default function MyGithubCalendar() {
@@ -25,12 +34,15 @@ export default function MyGithubCalendar() {
                     <FaExternalLinkAlt />
                 </div>
             </div>
-            <div className="transition-all duration-150 cursor-pointer">
+            <div className="overflow-hidden w-full transition-all duration-150 cursor-pointer">
                 <GitHubCalendar
                     username="nathanmota-dev"
                     theme={grayscaleTheme}
+                    blockSize={10}
+                    blockMargin={3}
+                    fontSize={12}
                     labels={{
-                        totalCount: "{{count}} contribuições no último ano",
+                        totalCount: "{{count}} contribuições",
                     }}
                 />
             </div>

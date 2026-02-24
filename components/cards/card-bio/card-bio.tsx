@@ -79,7 +79,8 @@ function CardBioContent(props: CardBioProps) {
 }
 
 export default function CardBio(props: CardBioProps) {
-    const isInternal = !props.external && props.href.startsWith("/");
+    const isInternal = props.href.startsWith("/");
+    const shouldOpenInNewTab = Boolean(props.external) && !isInternal;
 
     const className = joinClasses(
         "group bento-card border border-border/50 rounded-3xl transition-all duration-300 hover:bg-black/2 hover:shadow-xl hover:shadow-primary/5 active:scale-[1.02]",
@@ -101,8 +102,8 @@ export default function CardBio(props: CardBioProps) {
     return (
         <a
             href={props.href}
-            target={props.external ? "_blank" : undefined}
-            rel={props.external ? "noreferrer" : undefined}
+            target={shouldOpenInNewTab ? "_blank" : undefined}
+            rel={shouldOpenInNewTab ? "noreferrer" : undefined}
             className={className}
         >
             <CardBioContent {...props} />

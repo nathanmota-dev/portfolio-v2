@@ -1,32 +1,33 @@
 import Image from "next/image";
 import Link from "next/link";
-import { FaGithub, FaLinkedin, FaSpotify } from "react-icons/fa";
+import { FaLinkedin, FaSpotify } from "react-icons/fa";
 import { FiBookOpen, FiMessageCircle, FiBox } from "react-icons/fi";
+import { SlScreenDesktop } from "react-icons/sl";
 import { SiX } from "react-icons/si";
 import { Badge } from "@/components/badge/badge";
 import CardBio from "@/components/cards/card-bio/card-bio";
 import { RESUME_DATA } from "@/data/resume-data";
+import MyGithubCalendar from "@/components/github-calendar/github-calendar";
 
 export default function Home() {
   const techStack = RESUME_DATA.techStack;
   const findSocialUrl = (name: string) =>
     RESUME_DATA.contact.social.find((item) => item.name === name)?.url ?? "#";
 
-  const githubUrl = findSocialUrl("GitHub");
   const xUrl = findSocialUrl("X (Twitter)");
   const linkedInUrl = findSocialUrl("LinkedIn");
   const spotifyUrl = findSocialUrl("Spotify");
 
   return (
-    <div className="bg-background bg-noise text-foreground py-2 px-4 sm:px-6 selection:bg-primary/20">
+    <div className="text-foreground py-2 px-4 sm:px-6 selection:bg-primary/20">
       <main className="max-w-3xl mx-auto space-y-8">
         <div className="grid grid-cols-1 md:grid-cols-12 gap-6">
           <div className="md:col-span-8 flex flex-col justify-center space-y-4">
             <h1 className="text-4xl md:text-5xl font-bold tracking-tight leading-[1.1]">
               Software Engineer
             </h1>
-            <p className="text-muted-foreground text-lg max-w-xl leading-relaxed">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate possimus eveniet aliquam officiis ab quod debitis, maiores eaque incidunt vel esse, eligendi soluta?
+            <p className="text-muted-foreground text-base max-w-xl leading-relaxed">
+              Estou sempre aberto a novas possibilidades futuras. Vamos construir algo incrível juntos?
             </p>
             <Link
               href="/cv"
@@ -34,10 +35,8 @@ export default function Home() {
             >
               View Resume
             </Link>
-
           </div>
           <div className="md:col-span-4 relative group">
-            <div className="absolute inset-0 bg-primary/20 blur-3xl rounded-3xl group-hover:bg-primary/30 transition-all duration-700"></div>
             <div className="relative aspect-square rounded-3xl overflow-hidden border border-border/50">
               <Image
                 src={RESUME_DATA.avatarUrl}
@@ -75,13 +74,12 @@ export default function Home() {
             </div>
           </div>
 
-          {/* GitHub */}
+          {/* My Setup */}
           <CardBio
             variant="social"
-            href={githubUrl}
-            external
-            icon={FaGithub}
-            text="GitHub"
+            href="/setup"
+            icon={SlScreenDesktop}
+            text="My Setup"
             className="md:col-span-3"
           />
 
@@ -141,6 +139,7 @@ export default function Home() {
             text="A curated playlist to keep focus while coding, planning and shipping features."
             className="md:col-span-6"
           />
+          <MyGithubCalendar />
         </div>
       </main>
     </div>
