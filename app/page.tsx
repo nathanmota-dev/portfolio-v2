@@ -20,8 +20,8 @@ export default function Home() {
 
   return (
     <div className="text-foreground py-2 px-4 sm:px-6 selection:bg-primary/20">
-      <main className="max-w-3xl mx-auto space-y-8">
-        <div className="grid grid-cols-1 md:grid-cols-12 gap-6">
+      <main className="max-w-3xl mx-auto space-y-4">
+        <div className="flex flex-col md:flex-row justify-between gap-6">
           <div className="md:col-span-8 flex flex-col justify-center space-y-4">
             <h1 className="text-4xl md:text-5xl font-bold tracking-tight leading-[1.1]">
               Software Engineer
@@ -37,15 +37,17 @@ export default function Home() {
             </Link>
           </div>
           <div className="md:col-span-4 relative group">
-            <div className="relative aspect-square rounded-3xl overflow-hidden border border-border/50">
-              <Image
-                src={RESUME_DATA.avatarUrl}
-                fill
-                priority
-                sizes="(min-width: 768px) 33vw, 100vw"
-                className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
-                alt="Profile"
-              />
+            <div className="md:col-span-4 flex justify-center">
+              <div className="rounded-3xl overflow-hidden border border-border/50">
+                <Image
+                  src={RESUME_DATA.avatarUrl}
+                  width={180}
+                  height={180}
+                  priority
+                  className="object-cover transition-transform duration-700 hover:scale-110"
+                  alt="Profile"
+                />
+              </div>
             </div>
           </div>
         </div>

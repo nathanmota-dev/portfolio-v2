@@ -24,7 +24,7 @@ export default function MyGithubCalendar() {
             href={RESUME_DATA.contact.social[0].url}
             target="_blank"
             rel="noopener noreferrer"
-            className="group bento-card md:col-span-12 p-6 border border-border/50 rounded-3xl cursor-pointer transition-all duration-300 hover:shadow-xl hover:shadow-primary/5 active:scale-[1.02]" >
+            className="group bento-card md:col-span-12 px-6 py-4 border border-border/50 rounded-3xl cursor-pointer transition-all duration-300 hover:shadow-xl hover:shadow-primary/5 active:scale-[1.02]" >
             <div className="flex justify-between pb-6">
                 <div className={`flex items-center gap-2 transition-transform duration-300 group-hover:translate-x-1`}>
                     <FaGithub className="w-4 h-4 text-muted-foreground" />
