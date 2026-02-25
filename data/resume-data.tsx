@@ -111,6 +111,7 @@ export const RESUME_DATA = {
     ],
     projects: [
         {
+            image: "projects/distributed.jpeg",
             title: "Plataforma de Videoaulas com Sistema Distribuído",
             techStack: [
                 "Node",
@@ -124,12 +125,15 @@ export const RESUME_DATA = {
             ],
             description:
                 "Plataforma de ensino online com gerenciamento de filas para envio de vídeos, armazenamento em nuvem e sistema de autenticação e gerenciamento de cursos.",
+            githubUrl: "https://github.com/nathanmota-dev/systems-distributed",
+            type: "fullstack",
             link: {
                 label: "https://github.com/nathanmota-dev/systems-distributed",
                 href: "https://github.com/nathanmota-dev/systems-distributed",
             },
         },
         {
+            image: "projects/montebot.JPG",
             title: "Monte Bot - Laboratório de Robótica",
             techStack: [
                 "Next",
@@ -141,12 +145,16 @@ export const RESUME_DATA = {
             ],
             description:
                 "Site institucional com formulário de processo seletivo e autenticação com NextAuth (login via GitHub). Inclui um dashboard para visualização de inscritos e seus dados.",
+            githubUrl: "https://github.com/monte-bot/montebot",
+            deployUrl: "https://monte-bot.vercel.app/",
+            type: "fullstack",
             link: {
                 label: "https://monte-bot.vercel.app/",
                 href: "https://monte-bot.vercel.app/",
             },
         },
         {
+            image: "projects/poo2.JPG",
             title: "MedAgenda",
             techStack: [
                 "Java",
@@ -160,13 +168,17 @@ export const RESUME_DATA = {
                 "TailwindCSS",
             ],
             description:
-                "Sistema para gerenciamento de consultório médico, incluindo gestão de pacientes, doutores e consultas.",
+                "Med Agenda é um projeto desenvolvido para o gerenciamento de um consultório médico, incluindo a gestão de pacientes, doutores e consultas",
+            githubUrl: "https://github.com/nathanmota-dev/final-project-poo2",
+            deployUrl: "https://final-project-poo2.vercel.app/",
+            type: "fullstack",
             link: {
                 label: "https://final-project-poo2.vercel.app/",
                 href: "https://final-project-poo2.vercel.app/",
             },
         },
         {
+            image: "projects/blog.JPG",
             title: "Blog com Next",
             techStack: [
                 "Next",
@@ -176,13 +188,17 @@ export const RESUME_DATA = {
                 "@next/mdx",
             ],
             description:
-                "Blog dinâmico utilizando MDX, onde cada arquivo gera automaticamente uma rota.",
+                "O objetivo do blog é permitir a criação de novos posts de forma dinâmica, utilizando arquivos MDX onde cada arquivo MDX criado gera automaticamente uma rota.",
+            githubUrl: "https://github.com/nathanmota-dev/blog-nextjs",
+            deployUrl: "https://blog-do-nathan.vercel.app/",
+            type: "frontend",
             link: {
                 label: "https://blog-do-nathan.vercel.app/",
                 href: "https://blog-do-nathan.vercel.app/",
             },
         },
         {
+            image: "projects/dashboard.JPG",
             title: "Dashboard Full Stack",
             techStack: [
                 "Next",
@@ -192,13 +208,17 @@ export const RESUME_DATA = {
                 "Docker",
             ],
             description:
-                "Dashboard com CRUD de usuários, autenticação, criptografia, permissões e controle de acesso.",
+                "Dashborad feito com Next com CRUD de Usuários, Autenticação, Criptografia, Permissões diferentes para usuários e Resgate de informações no acesso",
+            githubUrl: "https://github.com/nathanmota-dev/dashboard-next-crud",
+            deployUrl: "https://dashboard-next-crud.vercel.app/",
+            type: "fullstack",
             link: {
                 label: "https://dashboard-next-crud.vercel.app/",
                 href: "https://dashboard-next-crud.vercel.app/",
             },
         },
         {
+            image: "projects/TechVantage.JPG",
             title: "Tech Vantage - Site Corporativo",
             techStack: [
                 "PHP",
@@ -209,13 +229,17 @@ export const RESUME_DATA = {
                 "MySQL",
             ],
             description:
-                "Sistema funcional com cadastro de formulário e impressão de dados.",
+                "Projeto Final Programação para Internet desenvolvendo um sistema funcional com alguns requisitos como Cadastro de Formulário e Impressão de Dados",
+            githubUrl: "https://github.com/nathanmota-dev/Programacao-para-Internet-1",
+            deployUrl: "http://techvantage.infinityfreeapp.com/index.php",
+            type: "fullstack",
             link: {
                 label: "http://techvantage.infinityfreeapp.com/index.php",
                 href: "http://techvantage.infinityfreeapp.com/index.php",
             },
         },
         {
+            image: "projects/Todo.jpg",
             title: "Todo List - MERN Stack",
             techStack: [
                 "MongoDB",
@@ -226,13 +250,17 @@ export const RESUME_DATA = {
                 "Vite",
             ],
             description:
-                "CRUD completo utilizando banco não relacional e sistema de login.",
+                "POC - Todo List feito com o objetivo de realizar as 4 operações de um CRUD utilizando um banco de dados não relacional, e também foi feito a realização de um Sistema de Login Completo",
+            githubUrl: "https://github.com/nathanmota-dev/todo-list-mern-stack",
+            deployUrl: "https://todo-list-mern-stack.vercel.app/",
+            type: "fullstack",
             link: {
                 label: "https://todo-list-mern-stack.vercel.app/",
                 href: "https://todo-list-mern-stack.vercel.app/",
             },
         },
         {
+            image: "projects/Coffee-LP.JPG",
             title: "Landing Page Meow Café",
             techStack: [
                 "HTML",
@@ -240,13 +268,17 @@ export const RESUME_DATA = {
                 "JavaScript",
             ],
             description:
-                "Landing Page responsiva sem o uso de frameworks.",
+                "Projeto proposto pela Codante onde o objetivo foi dar a vida ao design do Meow Café transformando-o em uma página funcional e responsiva sem o uso de frameworks.",
+            githubUrl: "https://github.com/nathanmota-dev/landing-page-meow-cafe",
+            deployUrl: "https://nathanmota-dev.github.io/landing-page-meow-cafe/",
+            type: "frontend",
             link: {
                 label: "https://nathanmota-dev.github.io/landing-page-meow-cafe/",
                 href: "https://nathanmota-dev.github.io/landing-page-meow-cafe/",
             },
         },
         {
+            image: "projects/FastAPI.JPG",
             title: "API - FastAPI",
             techStack: [
                 "Python",
@@ -254,13 +286,17 @@ export const RESUME_DATA = {
                 "PostgreSQL",
             ],
             description:
-                "API robusta e modularizada em Python, reaproveitada em projeto de Iniciação Científica.",
+                "API feita com FastApi com o objetivo de construir uma API roubusta e modularizada em Python onde utilizei foi reaproveitada na minha Iniciação Científica",
+            githubUrl: "https://github.com/nathanmota-dev/node-com-fastify",
+            deployUrl: "",
+            type: "backend",
             link: {
                 label: "https://github.com/nathanmota-dev/node-com-fastify",
                 href: "https://github.com/nathanmota-dev/node-com-fastify",
             },
         },
         {
+            image: "projects/Insove-LP.JPG",
             title: "Landing Page Insove Medical Healthcare",
             techStack: [
                 "HTML",
@@ -270,13 +306,17 @@ export const RESUME_DATA = {
                 "ScrollReveal",
             ],
             description:
-                "Landing Page para consultórios médicos com foco em experiência do usuário.",
+                "Landing Page feita utilizando TailwindCSS projetada para consultórios médicos onde o objetivo foi proporcionar uma boa experiência para médicos e pacientes.",
+            githubUrl: "https://github.com/nathanmota-dev/landing-page-insove-medical-healthcare",
+            deployUrl: "https://insove-medical-healthcare.netlify.app/",
+            type: "frontend",
             link: {
                 label: "https://insove-medical-healthcare.netlify.app/",
                 href: "https://insove-medical-healthcare.netlify.app/",
             },
         },
         {
+            image: "projects/Buscador.JPG",
             title: "Buscador de Nomes",
             techStack: [
                 "React",
@@ -285,13 +325,17 @@ export const RESUME_DATA = {
                 "MySQL",
             ],
             description:
-                "Buscador de nomes consumindo API no backend, com histórico de consultas.",
+                "Projeto Final de Programação para Internet onde o objetivo foi criar um buscador de nomes consumindo uma API no backend, tratando os dados e exibindo no frontend com um histórico de consultas.",
+            githubUrl: "https://github.com/nathanmota-dev/programacao-para-internet-2",
+            deployUrl: "https://programacao-para-internet-2.vercel.app/",
+            type: "fullstack",
             link: {
                 label: "https://programacao-para-internet-2.vercel.app/",
                 href: "https://programacao-para-internet-2.vercel.app/",
             },
         },
         {
+            image: "projects/GoogleKeep.JPG",
             title: "Google Keep Clone",
             techStack: [
                 "HTML",
@@ -299,13 +343,17 @@ export const RESUME_DATA = {
                 "JavaScript",
             ],
             description:
-                "Clone do Google Keep permitindo criar, fixar, duplicar e exportar notas em CSV.",
+                "Clone do Google Keep proposto a ser realizado sem frameworks onde permite que você faça anotações, fixe notas, duplique notas e exporte as notas para um arquivo CSV.",
+            githubUrl: "https://github.com/nathanmota-dev/Google-Keep-JS",
+            deployUrl: "https://google-keep-js.vercel.app/",
+            type: "frontend",
             link: {
                 label: "https://google-keep-js.vercel.app/",
                 href: "https://google-keep-js.vercel.app/",
             },
         },
         {
+            image: "projects/NodeFastify.JPG",
             title: "API - Node Fastify",
             techStack: [
                 "Node",
@@ -314,12 +362,16 @@ export const RESUME_DATA = {
             ],
             description:
                 "API com CRUD utilizando banco de dados relacional.",
+            githubUrl: "https://github.com/nathanmota-dev/node-com-fastify",
+            deployUrl: "",
+            type: "backend",
             link: {
                 label: "https://github.com/nathanmota-dev/node-com-fastify",
                 href: "https://github.com/nathanmota-dev/node-com-fastify",
             },
         },
         {
+            image: "projects/habits.JPG",
             title: "Habit Tracker",
             techStack: [
                 "Next",
@@ -331,7 +383,11 @@ export const RESUME_DATA = {
                 "Redis",
             ],
             description:
-                "Aplicação para gerenciamento de hábitos com autenticação e persistência de dados.",
+                "Med Agenda é um projeto desenvolvido para o gerenciamento de um consultório médico, incluindo a gestão de pacientes, doutores e consultas",
+            githubUrl: "https://github.com/nathanmota-dev/habit-manager",
+            deployUrl: "https://habit-manager-six.vercel.app/",
+            type: "frontend",
+            developing: "Em Desenvolvimento",
             link: {
                 label: "https://habit-manager-six.vercel.app/",
                 href: "https://habit-manager-six.vercel.app/",
