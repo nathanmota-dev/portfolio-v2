@@ -55,3 +55,21 @@ article pre {
 article a {
   @apply text-zinc-950 underline decoration-purple-500 underline-offset-4 font-medium;
 }
+
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-20px);
+  }
+
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+.animate-float-slow {
+  animation: float 3s ease-in-out infinite;
+}
