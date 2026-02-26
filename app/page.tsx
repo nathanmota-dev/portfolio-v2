@@ -29,12 +29,21 @@ export default function Home() {
             <p className="text-muted-foreground text-base max-w-xl leading-relaxed">
               Estou sempre aberto a novas possibilidades futuras. Vamos construir algo incrível juntos?
             </p>
-            <Link
-              href="/cv"
-              className="group bento-card w-full px-6 py-2.5 border border-border/50 rounded-3xl font-medium text-sm transition-all duration-300 hover:bg-black/2 hover:shadow-xl hover:shadow-primary/5 active:scale-[1.02]"
-            >
-              View Resume
-            </Link>
+            <div className="flex justify-center items-center gap-2">
+              <Link
+                href="/cv"
+                className="w-full flex justify-center px-6 py-2.5 border border-border/50 rounded-3xl font-medium text-sm transition-all duration-300 hover:bg-black/2 hover:shadow-xl hover:shadow-primary/5 active:scale-[1.02]"
+              >
+                View Resume
+              </Link>
+              <a
+                href="/cv/Nathan_Soares_Mota.pdf"
+                download
+                className="w-full flex justify-center px-6 py-2.5 border border-border/50 rounded-3xl font-medium text-sm transition-all duration-300 hover:bg-black/2 hover:shadow-xl hover:shadow-primary/5 active:scale-[1.02]"
+              >
+                Download Resume
+              </a>
+            </div>
           </div>
           <div className="md:col-span-4 relative group">
             <div className="md:col-span-4 flex justify-center">
