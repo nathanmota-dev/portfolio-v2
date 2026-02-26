@@ -4,6 +4,7 @@ import Link from "next/link"
 import { usePathname } from "next/navigation"
 import { FiArrowLeft } from "react-icons/fi"
 import { Button } from "../button/button"
+import { ThemeToggle } from "../theme-toggle/theme-toggle"
 
 export default function Navbar() {
     const pathname = usePathname()
@@ -24,9 +25,10 @@ export default function Navbar() {
                     </Button>
                 )}
                 <div className="flex items-center gap-4 md:gap-6">
-                    <a href="/projects" className="nav-link">/projects</a>
-                    <a href="/articles" className="nav-link">/articles</a>
-                    <a href="/contact" className="nav-link">/contact</a>
+                    <Link href="/projects" className="nav-link">/projects</Link>
+                    <Link href="/articles" className="nav-link">/articles</Link>
+                    <Link href="/contact" className="nav-link">/contact</Link>
+                    <ThemeToggle />
                 </div>
             </nav>
         </div>
