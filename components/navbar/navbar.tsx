@@ -11,7 +11,7 @@ export default function Navbar() {
     const isHome = pathname === "/"
 
     return (
-        <div className="max-w-3xl mx-auto space-y-8 py-2 px-3 md:px-0">
+        <div className="max-w-3xl mx-auto space-y-8 py-2 px-4 lg:px-0">
             <nav className="flex items-center justify-between py-4">
                 {isHome ? (
                     <div className="flex items-center font-display font-bold text-lg">

@@ -27,7 +27,7 @@ export default function Projects() {
             </div>
 
             <main>
-                <section className="grid grid-cols-1 md:grid-cols-2 gap-6 min-h-125 content-start">
+                <section className="grid grid-cols-1 md:grid-cols-2 gap-6 min-h-125 content-start px-4 lg:px-0">
                     {filteredProjects.length > 0 ? (
                         filteredProjects.map((project) => (
                             <ExpandedProjectCard
