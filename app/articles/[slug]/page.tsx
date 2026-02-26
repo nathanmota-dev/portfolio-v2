@@ -50,15 +50,15 @@ export default async function ArticlePage({
                 </h1>
             </div>
             <div className="flex flex-col items-center justify-center pb-8">
-                <div className="text-muted-foreground text-sm max-sm:text-xs">
-                    {articleData.date} {"//"} {articleData.location}
-                </div>
                 <div className="flex w-full max-w-prose flex-col items-center justify-center gap-4 px-4 pb-6 pt-1">
                     <div className="flex flex-wrap gap-x-3">
                         {articleData.tags.map((tag: string) => (
                             <Tag tag={tag} key={tag} />
                         ))}
                     </div>
+                </div>
+                <div className="text-muted-foreground text-sm max-sm:text-xs">
+                    {articleData.date}
                 </div>
             </div>
             <Article html={articleData.contentHtml} />

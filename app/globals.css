@@ -33,7 +33,7 @@ body {
 }
 
 .dark body {
-  @apply bg-background text-foreground;
+  @apply dark:bg-zinc-900 dark:text-zinc-200;
 }
 
 
@@ -45,20 +45,40 @@ article p {
   @apply leading-relaxed text-zinc-800;
 }
 
+.dark article p {
+  @apply dark:text-zinc-300/80;
+}
+
 article li {
   @apply text-zinc-800;
+}
+
+.dark article li {
+  @apply dark:text-zinc-300/80;
 }
 
 article strong {
   @apply font-bold text-zinc-950;
 }
 
+.dark article strong {
+  @apply dark:text-zinc-200;
+}
+
 article h2 {
   @apply pt-8 text-3xl max-sm:text-2xl font-bold text-zinc-950;
 }
 
+.dark article h2 {
+  @apply dark:text-zinc-200;
+}
+
 article h3 {
   @apply pt-4 text-xl max-sm:text-lg font-bold text-zinc-950;
+}
+
+.dark article h3 {
+  @apply dark:text-zinc-200;
 }
 
 article ul {
@@ -69,6 +89,10 @@ article ul li {
   @apply relative pl-4 before:absolute before:left-0 before:top-0 before:text-purple-600 before:content-['>'];
 }
 
+.dark article ul li {
+  @apply dark:before:text-purple-500;
+}
+
 article ol {
   @apply list-inside list-decimal text-zinc-800;
 }
@@ -77,16 +101,32 @@ article blockquote {
   @apply border-l-2 border-purple-500 pl-3 text-zinc-700;
 }
 
+.dark article blockquote {
+  @apply dark:border-sky-600;
+}
+
 article :not(pre)>code {
   @apply mx-1 select-all text-nowrap rounded px-1.5 py-0.5 text-sm text-zinc-950 ring-1 ring-zinc-300 bg-zinc-50;
+}
+
+.dark article :not(pre)>code {
+  @apply dark:text-zinc-200 dark:ring-zinc-600;
 }
 
 article pre {
   @apply overflow-x-auto p-4 text-sm ring-1 ring-zinc-300 border border-zinc-950 rounded-3xl text-black;
 }
 
+.dark article pre {
+  @apply dark:text-white dark:ring-zinc-500;
+}
+
 article a {
   @apply text-zinc-950 underline decoration-purple-500 underline-offset-4 font-medium;
+}
+
+.dark article a {
+  @apply dark:decoration-purple-600;
 }
 
 @keyframes float {
