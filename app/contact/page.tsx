@@ -1,6 +1,6 @@
 "use client";
 
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { Button } from "@/components/button/button";
@@ -11,7 +11,28 @@ import { contactSchema, type ContactFormValues } from "@/schema/contact-schema";
 export default function Contact() {
     const formElementRef = useRef<HTMLFormElement>(null);
     const hasSubmittedRef = useRef(false);
+    const [isDarkMode, setIsDarkMode] = useState(false);
     const [submitStatus, setSubmitStatus] = useState<"idle" | "sending" | "success">("idle");
+
+    useEffect(() => {
+        const root = document.documentElement;
+
+        const syncTheme = () => {
+            setIsDarkMode(root.classList.contains("dark"));
+        };
+
+        syncTheme();
+
+        const observer = new MutationObserver(syncTheme);
+        observer.observe(root, {
+            attributes: true,
+            attributeFilter: ["class"],
+        });
+
+        return () => {
+            observer.disconnect();
+        };
+    }, []);
 
     const {
         register,
@@ -73,7 +94,7 @@ export default function Contact() {
                                 type="text"
                                 required
                                 placeholder="Seu nome"
-                                className="w-full rounded-2xl border border-border/50 bg-background px-4 py-2.5 text-sm outline-none transition-all focus:border-purple-700"
+                                className="w-full rounded-2xl border border-border/50 px-4 py-2.5 text-sm text-foreground placeholder:text-muted-foreground placeholder:opacity-100 outline-none transition-all focus:border-purple-700 dark:placeholder:text-foreground/70"
                                 {...register("name")}
                             />
                             {errors.name?.message ? (
@@ -90,7 +111,7 @@ export default function Contact() {
                                 type="email"
                                 required
                                 placeholder="voce@exemplo.com"
-                                className="w-full rounded-2xl border border-border/50 bg-background px-4 py-2.5 text-sm outline-none transition-all focus:border-purple-700"
+                                className="w-full rounded-2xl border border-border/50 px-4 py-2.5 text-sm text-foreground placeholder:text-muted-foreground placeholder:opacity-100 outline-none transition-all focus:border-purple-700 dark:placeholder:text-foreground/70"
                                 {...register("email")}
                             />
                             {errors.email?.message ? (
@@ -107,7 +128,7 @@ export default function Contact() {
                                 rows={6}
                                 required
                                 placeholder="Escreva sua mensagem"
-                                className="w-full resize-none rounded-2xl border border-border/50 bg-background px-4 py-3 text-sm outline-none transition-all focus:border-purple-700"
+                                className="w-full resize-none rounded-2xl border border-border/50 px-4 py-3 text-sm text-foreground placeholder:text-muted-foreground placeholder:opacity-100 outline-none transition-all focus:border-purple-700 dark:placeholder:text-foreground/70"
                                 {...register("description")}
                             />
                             {errors.description?.message ? (
@@ -142,7 +163,7 @@ export default function Contact() {
 
                 <aside className="group bento-card md:col-span-4 min-h-105 p-6 border border-border/50 rounded-3xl transition-all duration-300 hover:bg-black/2 hover:shadow-xl hover:shadow-primary/5 active:scale-[1.01] flex items-center justify-center text-center">
                     <Image
-                        src="/cellphone.png"
+                        src={isDarkMode ? "/cellphone-white.png" : "/cellphone.png"}
                         alt="Cell Phone"
                         width={500}
                         height={500}

@@ -15,8 +15,8 @@ const GitHubCalendar = dynamic(
 
 export default function MyGithubCalendar() {
     const grayscaleTheme = {
-        light: ['#f0f0f0', '#d1d1d1', '#9e9e9e', '#616161', '#212121'],
-        dark: ['#161b22', '#30363d', '#6e7681', '#afb5bb', '#ffffff'],
+        light: ['#18181b', '#52525b', '#a1a1aa', '#f4f4f5', '#ffffff'],
+        dark: ['#18181b', '#27272a', '#52525b', '#a1a1aa', '#f4f4f5'],
     };
 
     return (

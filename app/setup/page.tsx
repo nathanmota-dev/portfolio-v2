@@ -67,7 +67,7 @@ export default function Setup() {
                         </h3>
                         <div className="flex flex-wrap gap-2">
                             {personalStackItems.map((tool) => (
-                                <Badge key={tool} className="bg-background/50">{tool}</Badge>
+                                <Badge key={tool} variant="secondary">{tool}</Badge>
                             ))}
                         </div>
                     </div>
@@ -79,7 +79,7 @@ export default function Setup() {
                         </h3>
                         <div className="flex flex-wrap gap-2">
                             {workStackItems.map((tool) => (
-                                <Badge key={tool} className="bg-background/50">{tool}</Badge>
+                                <Badge key={tool} variant="secondary">{tool}</Badge>
                             ))}
                         </div>
                     </div>
@@ -90,7 +90,7 @@ export default function Setup() {
                         </h3>
                         <div className="flex flex-wrap gap-2">
                             {toolsItems.map((tool) => (
-                                <Badge key={tool} className="bg-background/50">{tool}</Badge>
+                                <Badge key={tool} variant="secondary">{tool}</Badge>
                             ))}
                         </div>
                     </div>
