@@ -24,10 +24,10 @@ export default function Home() {
         <div className="flex flex-col-reverse md:flex-row justify-between gap-6">
           <div className="md:col-span-8 flex flex-col justify-center space-y-4">
             <h1 className="text-4xl md:text-5xl font-bold tracking-tight leading-[1.1]">
-              Software Engineer
+              {RESUME_DATA.position}
             </h1>
             <p className="text-muted-foreground text-base max-w-xl leading-relaxed">
-              Estou sempre aberto a novas possibilidades futuras. Vamos construir algo incrível juntos?
+              {RESUME_DATA.initialPhrase}
             </p>
             <div className="flex justify-center items-center gap-2">
               <Link

@@ -4,6 +4,7 @@ import { SiX } from "react-icons/si";
 export const RESUME_DATA = {
     name: "Nathan Mota",
     initials: "NM",
+    position: "Software Engineer",
     location: "Ribeirão Preto, SP, Brasil",
     techStack: ["TypeScript", "React", "Angular", "Node", "AWS"],
     locationLink: "https://www.google.com/maps/place/Ribeir%C3%A3o+Preto+-+State+of+S%C3%A3o+Paulo",
@@ -14,6 +15,7 @@ export const RESUME_DATA = {
   `,
     avatarUrl: "https://avatars.githubusercontent.com/u/120220035?v=4",
     personalWebsiteUrl: "#",
+    initialPhrase: "Your next big application needs a solid foundation and an amazing interface. Let’s talk and build something real.",
     contact: {
         email: "nathansmota@gmail.com",
         tel: "+55 16 99993-6596",
@@ -109,6 +111,28 @@ export const RESUME_DATA = {
         "AWS",
         "Docker",
     ],
+    setup: {
+        specsItems: [
+            "Ryzen 5 7600",
+            "32gb DDR5 6000mhz",
+            "GTX 1660",
+            "Water Cooler Aura 240mm",
+            "2tb M.2 NVMe",
+            "500gb Sata",
+            "Aula F75",
+            "Delux M600 / Zowie EC2-C",
+        ],
+        personalStackItems: [
+            "Windows 11",
+            "Cursor",
+            "WSL2",
+            "Codex",
+            "Gemini CLI",
+            "Vercel",
+        ],
+        workStackItems: ["Ubuntu", "VS Code", "Docker", "Figma", "AWS"],
+        toolsItems: ["Notion", "Obsidian", "Insomnia", "Discord", "Spotify"],
+    },
     projects: [
         {
             image: "projects/distributed.jpeg",

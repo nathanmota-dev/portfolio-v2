@@ -12,7 +12,7 @@ export default function Articles() {
         <main className="max-w-3xl mx-auto py-2 px-4 sm:px-0">
             <div className="py-4 flex justify-center text-center">
                 <h2 className="text-4xl md:text-5xl font-bold tracking-tight leading-[1.1] pb-6">
-                    Artigos
+                    Articles
                 </h2>
             </div>
             <Section className="flex flex-col gap-4">

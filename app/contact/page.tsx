@@ -58,16 +58,16 @@ export default function Contact() {
         <div className="max-w-3xl mx-auto py-2 px-4 sm:px-0">
             <div className="py-4 flex justify-center text-center">
                 <h2 className="text-4xl md:text-5xl font-bold tracking-tight leading-[1.1] pb-6">
-                    Contato
+                    Contact
                 </h2>
             </div>
 
             <main className="grid grid-cols-1 md:grid-cols-12 gap-4">
                 <section className="group bento-card md:col-span-8 p-6 border border-border/50 rounded-3xl transition-all duration-300 hover:bg-black/2 hover:shadow-xl hover:shadow-primary/5 active:scale-[1.01] space-y-5">
                     <div className="space-y-2">
-                        <h3 className="text-lg font-bold">Fale comigo</h3>
+                        <h3 className="text-lg font-bold">Talk to me</h3>
                         <p className="text-sm text-muted-foreground">
-                            Preencha o formulário para entrar em contato por e-mail.
+                            Fill out the form to contact us by email.
                         </p>
                     </div>
 
@@ -87,13 +87,13 @@ export default function Contact() {
 
                         <div className="space-y-1.5">
                             <label htmlFor="name" className="text-sm font-medium">
-                                Nome
+                                Name
                             </label>
                             <input
                                 id="name"
                                 type="text"
                                 required
-                                placeholder="Seu nome"
+                                placeholder="Your name"
                                 className="w-full rounded-2xl border border-border/50 px-4 py-2.5 text-sm text-foreground placeholder:text-muted-foreground placeholder:opacity-100 outline-none transition-all focus:border-purple-700 dark:placeholder:text-foreground/70"
                                 {...register("name")}
                             />
@@ -110,7 +110,7 @@ export default function Contact() {
                                 id="email"
                                 type="email"
                                 required
-                                placeholder="voce@exemplo.com"
+                                placeholder="you@exemple.com"
                                 className="w-full rounded-2xl border border-border/50 px-4 py-2.5 text-sm text-foreground placeholder:text-muted-foreground placeholder:opacity-100 outline-none transition-all focus:border-purple-700 dark:placeholder:text-foreground/70"
                                 {...register("email")}
                             />
@@ -121,7 +121,7 @@ export default function Contact() {
 
                         <div className="space-y-1.5">
                             <label htmlFor="description" className="text-sm font-medium">
-                                Descrição
+                                Description
                             </label>
                             <textarea
                                 id="description"
@@ -137,12 +137,12 @@ export default function Contact() {
                         </div>
 
                         <Button type="submit" variant="outline" className="w-full rounded-2xl h-11">
-                            {submitStatus === "sending" ? "Enviando..." : "Enviar mensagem"}
+                            {submitStatus === "sending" ? "Sending..." : "Send message"}
                         </Button>
 
                         {submitStatus === "success" ? (
                             <p className="text-sm text-green-700">
-                                Formulário enviado com sucesso. Vamos entrar em contato em breve.
+                                Form submitted successfully. I will contact you soon.
                             </p>
                         ) : null}
                     </form>

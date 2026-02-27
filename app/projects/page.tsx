@@ -17,7 +17,7 @@ export default function Projects() {
         <div className="max-w-3xl mx-auto py-2 px-4 sm:px-0">
             <div className="py-4 flex flex-col items-center text-center">
                 <h2 className="text-4xl md:text-5xl font-bold tracking-tight leading-[1.1] pb-2">
-                    Projetos
+                    Projects
                 </h2>
 
                 <SegmentedControl
@@ -43,7 +43,7 @@ export default function Projects() {
                         ))
                     ) : (
                         <div className="col-span-1 md:col-span-2 text-center py-12 text-muted-foreground">
-                            Nenhum projeto encontrado para esta categoria.
+                            No projects were found for this category.
                         </div>
                     )}
                 </section>

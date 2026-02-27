@@ -1,19 +1,12 @@
 import Badge from "@/components/badge/badge";
+import { RESUME_DATA } from "@/data/resume-data";
 import Image from "next/image";
 import { FiBox } from "react-icons/fi";
 import { PiStackSimpleBold } from "react-icons/pi";
 import { SlScreenDesktop } from "react-icons/sl";
 
 export default function Setup() {
-
-    const specsItems = [
-        "Ryzen 5 7600", "32gb DDR5 6000mhz", "GTX 1660",
-        "Water Cooler Aura 240mm", "2tb M.2 NVMe", "500gb Sata",
-        "Aula F75", "Delux M600 / Zowie EC2-C"
-    ];
-    const personalStackItems = ["Windows 11", "Cursor", "WSL2", "Codex", , "Gemini CLI", "Vercel"];
-    const workStackItems = ["Ubuntu", "VS Code", "Docker", "Figma", "AWS"];
-    const toolsItems = ["Notion", "Obsidian", "Insomnia", "Discord", "Spotify"];
+    const { specsItems, personalStackItems, workStackItems, toolsItems } = RESUME_DATA.setup;
 
     return (
         <div className="max-w-3xl mx-auto py-2 px-4 sm:px-0">
