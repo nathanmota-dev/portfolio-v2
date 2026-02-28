@@ -22,7 +22,7 @@ export default function Home() {
     <div className="text-foreground py-2 px-4 sm:px-6 selection:bg-primary/20">
       <main className="max-w-3xl mx-auto space-y-4">
         <div className="flex flex-col-reverse md:flex-row justify-between gap-6">
-          <div className="md:col-span-8 flex flex-col justify-center space-y-4">
+          <div className="md:col-span-8 flex flex-col justify-center space-y-4 text-center md:text-left">
             <h1 className="text-4xl md:text-5xl font-bold tracking-tight leading-[1.1]">
               {RESUME_DATA.position}
             </h1>
@@ -37,7 +37,7 @@ export default function Home() {
                 View Resume
               </Link>
               <a
-                href="/cv/Nathan_Soares_Mota.pdf"
+                href="/cv/curriculum.pdf"
                 download
                 className="w-full flex justify-center px-6 py-2.5 border border-border/50 rounded-3xl font-medium text-sm transition-all duration-300 hover:bg-black/2 hover:shadow-xl hover:shadow-primary/5 active:scale-[1.02]"
               >

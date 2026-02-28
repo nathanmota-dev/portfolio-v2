@@ -163,7 +163,7 @@ export default function Contact() {
 
                 <aside className="group bento-card md:col-span-4 min-h-105 p-6 border border-border/50 rounded-3xl transition-all duration-300 hover:bg-black/2 hover:shadow-xl hover:shadow-primary/5 active:scale-[1.01] flex items-center justify-center text-center">
                     <Image
-                        src={isDarkMode ? "/cellphone-white.png" : "/cellphone.png"}
+                        src={isDarkMode ? "/contact/cellphone-white.png" : "/contact/cellphone.png"}
                         alt="Cell Phone"
                         width={500}
                         height={500}

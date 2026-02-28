@@ -23,7 +23,7 @@ export default function Setup() {
                     <div className="group overflow-hidden bento-card md:col-span-8 border border-border/50 rounded-3xl transition-all duration-300 hover:shadow-xl hover:shadow-primary/5 active:scale-[1.01]">
                         <div className="relative h-full min-h-75 w-full">
                             <Image
-                                src="/setup.jpg"
+                                src="/setup/setup.jpg"
                                 alt="Setup"
                                 fill
                                 className="object-cover transition-transform duration-700 group-hover:scale-105"
