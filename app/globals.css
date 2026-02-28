@@ -146,3 +146,24 @@ article a {
 .animate-float-slow {
   animation: float 3s ease-in-out infinite;
 }
+
+.nav-link {
+  @apply relative px-2 py-2 text-sm font-medium rounded-3xl transition-all duration-300;
+  border: 1px solid transparent;
+}
+
+.nav-link.active::after {
+  content: "";
+  position: absolute;
+  left: 25%;
+  bottom: -6px;
+  width: 50%;
+  height: 2px;
+  background-color: var(--color-primary);
+  border-radius: 9999px;
+}
+
+.nav-link:hover {
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 4px color-mix(in srgb, var(--color-primary) 15%, transparent);
+}
