@@ -395,26 +395,23 @@ export const RESUME_DATA = {
             },
         },
         {
-            image: "projects/habits.JPG",
-            title: "Habit Tracker",
-            techStack: [
+            "image": "projects/portfolio-v1.png",
+            "title": "Portfólio Pessoal V1",
+            "techStack": [
                 "Next",
-                "TypeScript",
                 "TailwindCSS",
-                "PostgreSQL",
-                "NextAuth",
-                "Zod",
-                "Redis",
+                "Shadcn/ui",
+                "next-intl",
+                "TypeScript"
             ],
-            description:
-                "Med Agenda é um projeto desenvolvido para o gerenciamento de um consultório médico, incluindo a gestão de pacientes, doutores e consultas",
-            githubUrl: "https://github.com/nathanmota-dev/habit-manager",
-            deployUrl: "https://habit-manager-six.vercel.app/",
-            type: "frontend",
-            developing: "Em Desenvolvimento",
-            link: {
-                label: "https://habit-manager-six.vercel.app/",
-                href: "https://habit-manager-six.vercel.app/",
+            "description":
+                "Primeira versão do meu portfólio focada em internacionalização (i18n), design responsivo Mobile First e suporte a Dark Mode, apresentando meus principais projetos e experiências.",
+            "githubUrl": "https://github.com/nathanmota-dev/portfolio",
+            "deployUrl": "https://nathanmota-portifolio.vercel.app/",
+            "type": "frontend",
+            "link": {
+                "label": "https://nathanmota-portifolio.vercel.app/",
+                "href": "https://nathanmota-portifolio.vercel.app/",
             },
         },
     ],
