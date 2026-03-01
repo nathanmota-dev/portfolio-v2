@@ -9,10 +9,10 @@ export const RESUME_DATA = {
     techStack: ["TypeScript", "React", "Angular", "Node", "AWS"],
     locationLink: "https://www.google.com/maps/place/Ribeir%C3%A3o+Preto+-+State+of+S%C3%A3o+Paulo",
     about:
-        "Desenvolvedor Full-Stack apaixonado por solucionar problemas!",
+        "Full-Stack Developer passionate about solving problems!",
     summary: `
-    Desenvolvedor Full-Stack com mais de 2 anos de experiência no desenvolvimento de aplicações web completas, do Front-End ao Back-End. Formado em Sistemas de Informação pela UFU, iniciei minha trajetória como Técnico em Informática pela Unesp FCAV, onde desenvolvi meus primeiros projetos de programação. Atualmente trabalho construindo soluções escaláveis, integrações entre sistemas, aplicando boas práticas de engenharia de software.
-  `,
+    Full-Stack Developer with over 2 years of experience building complete web applications, from Front-End to Back-End. Graduated in Information Systems from UFU, I started my journey as an IT Technician at Unesp FCAV, where I developed my first programming projects. Currently, I work on building scalable solutions, system integrations, and applying software engineering best practices.
+    `,
     avatarUrl: "https://avatars.githubusercontent.com/u/120220035?v=4",
     personalWebsiteUrl: "#",
     initialPhrase: "Your next big application needs a solid foundation and an amazing interface. Let’s talk and build something real.",
@@ -24,34 +24,38 @@ export const RESUME_DATA = {
                 name: "GitHub",
                 url: "https://github.com/nathanmota-dev",
                 icon: FaGithub,
+                showOnCv: true,
             },
             {
                 name: "LinkedIn",
                 url: "https://www.linkedin.com/in/nathansmota/",
                 icon: FaLinkedin,
+                showOnCv: true,
             },
             {
                 name: "X (Twitter)",
                 url: "https://x.com/pq_nathan",
                 icon: SiX,
+                showOnCv: false,
             },
             {
                 name: "Spotify",
                 url: "https://open.spotify.com/user/d9zhqx5tfnna0pqx4or91e3re?si=bcf6f90eae0446d8",
                 icon: FaSpotify,
+                showOnCv: false,
             },
         ],
     },
     education: [
         {
-            school: "Universidade Federal de Uberlândia",
-            degree: "Sistemas de Informação",
+            school: "Federal University of Uberlândia (UFU)",
+            degree: "Information Systems",
             start: "2019",
             end: "2025",
         },
         {
-            school: "Universidade Estadual Paulista",
-            degree: "Técnico em Informática",
+            school: "São Paulo State University (Unesp)",
+            degree: "Computer Technician (IT)",
             start: "2015",
             end: "2016",
         },
@@ -60,42 +64,70 @@ export const RESUME_DATA = {
         {
             company: "Von Braun Labs",
             link: "https://www.linkedin.com/company/von-braun-labs/",
-            badges: ["Remoto"],
-            title: "Desenvolvedor Full-Stack (foco em Front-End)",
+            badges: ["Remote"],
+            title: "Full-Stack Developer (Front-End Focus)",
             start: "2025",
-            end: "Presente",
-            description:
-                "Atuação focada em Angular e TypeScript. Desenvolvimento de componentes reutilizáveis, refatorações estruturais e integração com serviços AWS (S3 e EC2).",
+            end: "Present",
+            description: `
+            Worked on the development and maintenance of web applications across multiple projects, contributing in different contexts and technology stacks.
+
+            Front-end: Refactored and modernized interfaces based on Figma layouts using Angular, HTML, CSS, JavaScript, and TypeScript. Developed reusable components, improved UI consistency, and enhanced overall user experience.
+
+            Back-end: Contributed to PHP and C# applications by creating and maintaining CRUD operations, fixing bugs, and refactoring legacy code to improve structure, readability, and performance.
+
+            Cloud integration: Worked with AWS services such as S3 and EC2 to support application infrastructure and deployments.
+            `,
         },
         {
             company: "Von Braun Labs",
             link: "https://www.linkedin.com/company/von-braun-labs/",
-            badges: ["Remoto"],
-            title: "Desenvolvedor Full-Stack",
+            badges: ["Remote"],
+            title: "Full-Stack Developer",
             start: "2024",
             end: "2025",
-            description:
-                "Desenvolvimento de suporte a simulações SDF via web, modernização de arquitetura legada para interfaces em JavaScript/PHP e otimização de queries MySQL.",
+            description: `
+            Supported the development of SDF simulation features through web interfaces, contributing to both front-end and back-end improvements.
+
+            Modernized legacy architecture by transitioning older JavaScript/PHP implementations into more structured and maintainable solutions.
+
+            Optimized MySQL queries to improve system performance and data retrieval efficiency.
+
+            Collaborated across teams to ensure stable integrations and continuous improvements in application reliability.
+            `,
         },
         {
             company: "X-RAT - FAPEMIG",
             link: "#",
-            badges: ["Híbrido"],
-            title: "Desenvolvedor Full-stack",
+            badges: ["Hybrid"],
+            title: "Full-Stack Developer",
             start: "2024",
             end: "2025",
-            description:
-                "Implementação de interfaces em React e Vite para análise de falhas de software, com integração ao back-end em FastAPI para relatórios automatizados.",
+            description: `
+            Participated in the X-RAT platform project, focused on analyzing software failure groups and identifying root causes.
+
+            Front-end (main responsibility): Designed and implemented the user interface using React, Vite, Tailwind CSS, React Query, and Chart.js, prioritizing performance, usability, and data visualization clarity.
+
+            Back-end: Developed features using Python and FastAPI for processing dataframes and EVTX log files.
+
+            Integrated front-end and back-end systems to enable automated reliability report generation and visualization.
+            `,
         },
         {
             company: "Jovens Programadores - UFU",
             link: "#",
-            badges: ["Presencial"],
-            title: "Professor de Programação Web",
+            badges: ["On-site"],
+            title: "Web Programming Instructor",
             start: "2024",
             end: "2024",
-            description:
-                "Ensino de HTML, CSS e Bootstrap para adolescentes, orientando projetos práticos e promovendo a inclusão digital.",
+            description: `
+            Taught fundamental computer science concepts to teenagers aged 12 and above.
+
+            Delivered practical classes on HTML, CSS, and introductory Bootstrap, guiding students step by step in building complete websites.
+
+            Supervised individual and group final projects, encouraging collaboration, creativity, and real-world application of knowledge.
+
+            Promoted digital inclusion and foundational programming skills in an academic environment.
+            `,
         },
     ],
     skills: [
@@ -136,7 +168,7 @@ export const RESUME_DATA = {
     projects: [
         {
             image: "projects/distributed.jpeg",
-            title: "Plataforma de Videoaulas com Sistema Distribuído",
+            title: "Video Lecture Platform with Distributed System",
             techStack: [
                 "Node",
                 "Fastify",
@@ -148,7 +180,7 @@ export const RESUME_DATA = {
                 "Amazon EC2",
             ],
             description:
-                "Plataforma de ensino online com gerenciamento de filas para envio de vídeos, armazenamento em nuvem e sistema de autenticação e gerenciamento de cursos.",
+                "Online learning platform with queue management for video uploads, cloud storage, and a course authentication and management system.",
             githubUrl: "https://github.com/nathanmota-dev/systems-distributed",
             type: "fullstack",
             link: {
@@ -158,7 +190,7 @@ export const RESUME_DATA = {
         },
         {
             image: "projects/montebot.JPG",
-            title: "Monte Bot - Laboratório de Robótica",
+            title: "Monte Bot - Robotics Laboratory",
             techStack: [
                 "Next",
                 "NextAuth",
@@ -168,7 +200,7 @@ export const RESUME_DATA = {
                 "Three.js",
             ],
             description:
-                "Site institucional com formulário de processo seletivo e autenticação com NextAuth (login via GitHub). Inclui um dashboard para visualização de inscritos e seus dados.",
+                "Institutional website with an application form and authentication using NextAuth (GitHub login). Includes a dashboard for viewing applicants and their data.",
             githubUrl: "https://github.com/monte-bot/montebot",
             deployUrl: "https://monte-bot.vercel.app/",
             type: "fullstack",
@@ -192,7 +224,7 @@ export const RESUME_DATA = {
                 "TailwindCSS",
             ],
             description:
-                "Med Agenda é um projeto desenvolvido para o gerenciamento de um consultório médico, incluindo a gestão de pacientes, doutores e consultas",
+                "Med Agenda is a project developed for managing a medical clinic, including the management of patients, doctors, and appointments.",
             githubUrl: "https://github.com/nathanmota-dev/final-project-poo2",
             deployUrl: "https://final-project-poo2.vercel.app/",
             type: "fullstack",
@@ -203,7 +235,7 @@ export const RESUME_DATA = {
         },
         {
             image: "projects/blog.JPG",
-            title: "Blog com Next",
+            title: "Blog with Next",
             techStack: [
                 "Next",
                 "TailwindCSS",
@@ -212,7 +244,7 @@ export const RESUME_DATA = {
                 "@next/mdx",
             ],
             description:
-                "O objetivo do blog é permitir a criação de novos posts de forma dinâmica, utilizando arquivos MDX onde cada arquivo MDX criado gera automaticamente uma rota.",
+                "The goal of the blog is to allow the creation of new posts dynamically, using MDX files where each created MDX file automatically generates a route.",
             githubUrl: "https://github.com/nathanmota-dev/blog-nextjs",
             deployUrl: "https://blog-do-nathan.vercel.app/",
             type: "frontend",
@@ -223,7 +255,7 @@ export const RESUME_DATA = {
         },
         {
             image: "projects/dashboard.JPG",
-            title: "Dashboard Full Stack",
+            title: "Full Stack Dashboard",
             techStack: [
                 "Next",
                 "TailwindCSS",
@@ -232,7 +264,7 @@ export const RESUME_DATA = {
                 "Docker",
             ],
             description:
-                "Dashborad feito com Next com CRUD de Usuários, Autenticação, Criptografia, Permissões diferentes para usuários e Resgate de informações no acesso",
+                "Dashboard built with Next.js featuring User CRUD, Authentication, Encryption, Different User Permissions, and Data Retrieval on Access",
             githubUrl: "https://github.com/nathanmota-dev/dashboard-next-crud",
             deployUrl: "https://dashboard-next-crud.vercel.app/",
             type: "fullstack",
@@ -243,7 +275,7 @@ export const RESUME_DATA = {
         },
         {
             image: "projects/TechVantage.JPG",
-            title: "Tech Vantage - Site Corporativo",
+            title: "Tech Vantage - Corporate Website",
             techStack: [
                 "PHP",
                 "HTML",
@@ -253,7 +285,7 @@ export const RESUME_DATA = {
                 "MySQL",
             ],
             description:
-                "Projeto Final Programação para Internet desenvolvendo um sistema funcional com alguns requisitos como Cadastro de Formulário e Impressão de Dados",
+                "Final Project for Internet Programming developing a functional system with requirements like Form Registration and Data Printing",
             githubUrl: "https://github.com/nathanmota-dev/Programacao-para-Internet-1",
             deployUrl: "http://techvantage.infinityfreeapp.com/index.php",
             type: "fullstack",
@@ -274,7 +306,7 @@ export const RESUME_DATA = {
                 "Vite",
             ],
             description:
-                "POC - Todo List feito com o objetivo de realizar as 4 operações de um CRUD utilizando um banco de dados não relacional, e também foi feito a realização de um Sistema de Login Completo",
+                "POC - Todo List made to perform the 4 CRUD operations using a non-relational database and includes a complete Login System",
             githubUrl: "https://github.com/nathanmota-dev/todo-list-mern-stack",
             deployUrl: "https://todo-list-mern-stack.vercel.app/",
             type: "fullstack",
@@ -292,7 +324,7 @@ export const RESUME_DATA = {
                 "JavaScript",
             ],
             description:
-                "Projeto proposto pela Codante onde o objetivo foi dar a vida ao design do Meow Café transformando-o em uma página funcional e responsiva sem o uso de frameworks.",
+                "Project proposed by Codante where the goal was to bring the Meow Café design to life, transforming it into a functional and responsive page without using frameworks.",
             githubUrl: "https://github.com/nathanmota-dev/landing-page-meow-cafe",
             deployUrl: "https://nathanmota-dev.github.io/landing-page-meow-cafe/",
             type: "frontend",
@@ -310,7 +342,7 @@ export const RESUME_DATA = {
                 "PostgreSQL",
             ],
             description:
-                "API feita com FastApi com o objetivo de construir uma API roubusta e modularizada em Python onde utilizei foi reaproveitada na minha Iniciação Científica",
+                "API built with FastAPI with the goal of creating a robust and modularized API in Python, later reused in my Scientific Initiation.",
             githubUrl: "https://github.com/nathanmota-dev/node-com-fastify",
             deployUrl: "",
             type: "backend",
@@ -330,7 +362,7 @@ export const RESUME_DATA = {
                 "ScrollReveal",
             ],
             description:
-                "Landing Page feita utilizando TailwindCSS projetada para consultórios médicos onde o objetivo foi proporcionar uma boa experiência para médicos e pacientes.",
+                "Landing Page created using TailwindCSS designed for medical clinics, aiming to provide a good experience for doctors and patients.",
             githubUrl: "https://github.com/nathanmota-dev/landing-page-insove-medical-healthcare",
             deployUrl: "https://insove-medical-healthcare.netlify.app/",
             type: "frontend",
@@ -341,7 +373,7 @@ export const RESUME_DATA = {
         },
         {
             image: "projects/Buscador.JPG",
-            title: "Buscador de Nomes",
+            title: "Name Finder",
             techStack: [
                 "React",
                 "Node",
@@ -349,7 +381,7 @@ export const RESUME_DATA = {
                 "MySQL",
             ],
             description:
-                "Projeto Final de Programação para Internet onde o objetivo foi criar um buscador de nomes consumindo uma API no backend, tratando os dados e exibindo no frontend com um histórico de consultas.",
+                "Final Project for Internet Programming where the goal was to create a name search engine consuming an API on the backend, processing the data, and displaying it on the frontend with a search history.",
             githubUrl: "https://github.com/nathanmota-dev/programacao-para-internet-2",
             deployUrl: "https://programacao-para-internet-2.vercel.app/",
             type: "fullstack",
@@ -367,7 +399,7 @@ export const RESUME_DATA = {
                 "JavaScript",
             ],
             description:
-                "Clone do Google Keep proposto a ser realizado sem frameworks onde permite que você faça anotações, fixe notas, duplique notas e exporte as notas para um arquivo CSV.",
+                "Google Keep clone proposed to be done without frameworks, allowing you to make notes, pin notes, duplicate notes, and export notes to a CSV file.",
             githubUrl: "https://github.com/nathanmota-dev/Google-Keep-JS",
             deployUrl: "https://google-keep-js.vercel.app/",
             type: "frontend",
@@ -385,7 +417,7 @@ export const RESUME_DATA = {
                 "PostgreSQL",
             ],
             description:
-                "API com CRUD utilizando banco de dados relacional.",
+                "API built with the goal of performing CRUD operations using a relational database.",
             githubUrl: "https://github.com/nathanmota-dev/node-com-fastify",
             deployUrl: "",
             type: "backend",
@@ -396,7 +428,7 @@ export const RESUME_DATA = {
         },
         {
             "image": "projects/portfolio-v1.png",
-            "title": "Portfólio Pessoal V1",
+            "title": "Personal Portfolio V1",
             "techStack": [
                 "Next",
                 "TailwindCSS",
@@ -405,7 +437,7 @@ export const RESUME_DATA = {
                 "TypeScript"
             ],
             "description":
-                "Primeira versão do meu portfólio focada em internacionalização (i18n), design responsivo Mobile First e suporte a Dark Mode, apresentando meus principais projetos e experiências.",
+                "First version of my portfolio focused on internationalization (i18n), Mobile-First responsive design, and Dark Mode support, showcasing my main projects and experiences.",
             "githubUrl": "https://github.com/nathanmota-dev/portfolio",
             "deployUrl": "https://nathanmota-portifolio.vercel.app/",
             "type": "frontend",

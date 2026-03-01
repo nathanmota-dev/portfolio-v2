@@ -67,19 +67,21 @@ export default function Cv() {
                                     </a>
                                 </Button>
                             ) : null}
-                            {RESUME_DATA.contact.social.map((social) => (
-                                <Button
-                                    key={social.name}
-                                    className="h-8 w-8"
-                                    variant="outline"
-                                    size="icon"
-                                    asChild
-                                >
-                                    <a href={social.url}>
-                                        <social.icon className="h-4 w-4" />
-                                    </a>
-                                </Button>
-                            ))}
+                            {RESUME_DATA.contact.social
+                                .filter((social) => social.showOnCv ?? true)
+                                .map((social) => (
+                                    <Button
+                                        key={social.name}
+                                        className="h-8 w-8"
+                                        variant="outline"
+                                        size="icon"
+                                        asChild
+                                    >
+                                        <a href={social.url}>
+                                            <social.icon className="h-4 w-4" />
+                                        </a>
+                                    </Button>
+                                ))}
                         </div>
                         <div className="hidden flex-col gap-x-1 font-mono text-sm text-muted-foreground print:flex">
                             {RESUME_DATA.contact.email ? (
@@ -110,6 +112,10 @@ export default function Cv() {
                     <h2 className="text-xl font-bold">Experiência de Trabalho</h2>
                     {RESUME_DATA.work.map((work) => {
                         const workKey = `${work.company}-${work.title}-${work.start}-${work.end}`;
+                        const workDescriptionItems = work.description
+                            .split("\n")
+                            .map((line) => line.trim())
+                            .filter(Boolean);
 
                         return (
                             <Card key={workKey}>
@@ -142,7 +148,11 @@ export default function Cv() {
                                     </h4>
                                 </CardHeader>
                                 <CardContent className="mt-2 text-xs">
-                                    {work.description}
+                                    <ul className="list-disc space-y-2 pl-4">
+                                        {workDescriptionItems.map((item) => (
+                                            <li key={`${workKey}-${item}`}>{item}</li>
+                                        ))}
+                                    </ul>
                                 </CardContent>
                             </Card>
                         );
