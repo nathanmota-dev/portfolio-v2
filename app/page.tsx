@@ -106,8 +106,11 @@ export default function Home() {
           />
 
           {/* Get in touch */}
-          <a href={`mailto:${RESUME_DATA.contact.email}`} className="group bento-card md:col-span-6 p-6 flex items-center justify-between gap-4 border border-border/50 rounded-3xl transition-all duration-300 hover:bg-black/2 hover:shadow-xl hover:shadow-primary/5 active:scale-[1.02]">
-            <div className="flex items-center gap-4">
+          <a
+            href={`mailto:${RESUME_DATA.contact.email}`}
+            className="group bento-card md:col-span-6 p-6 flex items-center justify-center gap-4 border border-border/50 rounded-3xl transition-all duration-300 hover:bg-black/2 hover:shadow-xl hover:shadow-primary/5 active:scale-[1.02] md:justify-start"
+          >
+            <div className="flex items-center gap-4 text-center md:text-left">
               <div className="hover:text-primary transition-transform duration-700 group-hover:rotate-360">
                 <FiMessageCircle className="w-6 h-6" />
               </div>
