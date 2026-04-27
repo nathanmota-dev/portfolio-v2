@@ -17,6 +17,7 @@ export default function Home() {
   const xUrl = findSocialUrl("X (Twitter)");
   const linkedInUrl = findSocialUrl("LinkedIn");
   const spotifyUrl = findSocialUrl("Spotify");
+  const resumeDownloadName = `${RESUME_DATA.name}.pdf`;
 
   return (
     <div className="text-foreground py-2 px-4 sm:px-6 selection:bg-primary/20">
@@ -38,7 +39,7 @@ export default function Home() {
               </Link>
               <a
                 href="/cv/curriculum.pdf"
-                download
+                download={resumeDownloadName}
                 className="w-full flex justify-center px-6 py-2.5 border border-border/50 rounded-3xl font-medium text-sm transition-all duration-300 hover:bg-black/2 hover:shadow-xl hover:shadow-primary/5 active:scale-[1.02]"
               >
                 Download Resume
