@@ -127,7 +127,7 @@ export default function Contact() {
                                 id="description"
                                 rows={6}
                                 required
-                                placeholder="Escreva sua mensagem"
+                                placeholder="Write your message"
                                 className="w-full resize-none rounded-2xl border border-border/50 px-4 py-3 text-sm text-foreground placeholder:text-muted-foreground placeholder:opacity-100 outline-none transition-all focus:border-purple-700 dark:placeholder:text-foreground/70"
                                 {...register("description")}
                             />
@@ -161,7 +161,7 @@ export default function Contact() {
                     />
                 </section>
 
-                <aside className="group bento-card md:col-span-4 min-h-105 p-6 border border-border/50 rounded-3xl transition-all duration-300 hover:bg-black/2 hover:shadow-xl hover:shadow-primary/5 active:scale-[1.01] flex items-center justify-center text-center">
+                <aside className="group bento-card hidden md:flex md:col-span-4 min-h-105 p-6 border border-border/50 rounded-3xl transition-all duration-300 hover:bg-black/2 hover:shadow-xl hover:shadow-primary/5 active:scale-[1.01] items-center justify-center text-center">
                     <Image
                         src={isDarkMode ? "/contact/cellphone-white.png" : "/contact/cellphone.png"}
                         alt="Cell Phone"
