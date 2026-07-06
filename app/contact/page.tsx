@@ -1,12 +1,22 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-import { useForm } from "react-hook-form";
+import { useForm, useWatch } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { Button } from "@/components/button/button";
 import { RESUME_DATA } from "@/data/resume-data";
 import Image from "next/image";
-import { contactSchema, type ContactFormValues } from "@/schema/contact-schema";
+import {
+    CONTACT_FIELD_LIMITS,
+    contactSchema,
+    type ContactFormValues,
+} from "@/schema/contact-schema";
+
+const isHoneypotFilled = (form: HTMLFormElement) => {
+    const honeyValue = new FormData(form).get("_honey");
+
+    return typeof honeyValue === "string" && honeyValue.trim().length > 0;
+};
 
 export default function Contact() {
     const formElementRef = useRef<HTMLFormElement>(null);
@@ -38,6 +48,7 @@ export default function Contact() {
         register,
         handleSubmit,
         reset,
+        control,
         formState: { errors },
     } = useForm<ContactFormValues>({
         resolver: zodResolver(contactSchema),
@@ -47,6 +58,13 @@ export default function Contact() {
             description: "",
         },
     });
+    const description = useWatch({
+        control,
+        name: "description",
+        defaultValue: "",
+    });
+    const descriptionLength = description.length;
+    const isDescriptionAtLimit = descriptionLength >= CONTACT_FIELD_LIMITS.description.max;
 
     const submitWithFormSubmit = () => {
         setSubmitStatus("sending");
@@ -79,11 +97,23 @@ export default function Contact() {
                         target="contact-form-submit-target"
                         onSubmit={(event) => {
                             event.preventDefault();
+
+                            if (isHoneypotFilled(event.currentTarget)) {
+                                return;
+                            }
+
                             void handleSubmit(submitWithFormSubmit)();
                         }}
                     >
-                        <input type="hidden" name="_subject" value="Novo contato do portfólio" />
+                        <input type="hidden" name="_subject" value="New portfolio contact" />
                         <input type="hidden" name="_captcha" value="false" />
+                        <input
+                            type="text"
+                            name="_honey"
+                            style={{ display: "none" }}
+                            tabIndex={-1}
+                            autoComplete="off"
+                        />
 
                         <div className="space-y-1.5">
                             <label htmlFor="name" className="text-sm font-medium">
@@ -93,6 +123,8 @@ export default function Contact() {
                                 id="name"
                                 type="text"
                                 required
+                                minLength={CONTACT_FIELD_LIMITS.name.min}
+                                maxLength={CONTACT_FIELD_LIMITS.name.max}
                                 placeholder="Your name"
                                 className="w-full rounded-2xl border border-border/50 px-4 py-2.5 text-sm text-foreground placeholder:text-muted-foreground placeholder:opacity-100 outline-none transition-all focus:border-purple-700 dark:placeholder:text-foreground/70"
                                 {...register("name")}
@@ -110,6 +142,7 @@ export default function Contact() {
                                 id="email"
                                 type="email"
                                 required
+                                maxLength={CONTACT_FIELD_LIMITS.email.max}
                                 placeholder="you@exemple.com"
                                 className="w-full rounded-2xl border border-border/50 px-4 py-2.5 text-sm text-foreground placeholder:text-muted-foreground placeholder:opacity-100 outline-none transition-all focus:border-purple-700 dark:placeholder:text-foreground/70"
                                 {...register("email")}
@@ -120,13 +153,27 @@ export default function Contact() {
                         </div>
 
                         <div className="space-y-1.5">
-                            <label htmlFor="description" className="text-sm font-medium">
-                                Description
-                            </label>
+                            <div className="flex items-center justify-between gap-3">
+                                <label htmlFor="description" className="text-sm font-medium">
+                                    Description
+                                </label>
+                                <span
+                                    className={`text-xs tabular-nums ${
+                                        isDescriptionAtLimit
+                                            ? "text-red-600"
+                                            : "text-muted-foreground"
+                                    }`}
+                                    aria-live="polite"
+                                >
+                                    {descriptionLength}/{CONTACT_FIELD_LIMITS.description.max}
+                                </span>
+                            </div>
                             <textarea
                                 id="description"
                                 rows={6}
                                 required
+                                minLength={CONTACT_FIELD_LIMITS.description.min}
+                                maxLength={CONTACT_FIELD_LIMITS.description.max}
                                 placeholder="Write your message"
                                 className="w-full resize-none rounded-2xl border border-border/50 px-4 py-3 text-sm text-foreground placeholder:text-muted-foreground placeholder:opacity-100 outline-none transition-all focus:border-purple-700 dark:placeholder:text-foreground/70"
                                 {...register("description")}
